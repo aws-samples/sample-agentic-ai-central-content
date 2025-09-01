@@ -1,0 +1,47 @@
+repos:
+  # Spell checking for markdown files only
+  - repo: https://github.com/streetsidesoftware/cspell-cli
+    rev: v9.0.1
+    hooks:
+      - id: cspell
+        args: [
+          --exclude, '.pre-commit-config.yaml',
+          --exclude, '.gitignore',
+          --exclude, '*.svg',
+          --exclude, '*.png',
+          --exclude, '*.jpg',
+          --exclude, '*.jpeg'
+        ]
+        files: \.(md|markdown)$
+
+  # Basic file hygiene
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v5.0.0
+    hooks:
+      - id: trailing-whitespace
+        exclude: |
+          (?x)^(
+              \.svg$|
+              \.png$|
+              \.jpg$|
+              \.jpeg$
+          )$
+      - id: end-of-file-fixer
+        exclude: |
+          (?x)^(
+              \.svg$|
+              \.png$|
+              \.jpg$|
+              \.jpeg$
+          )$
+      - id: check-merge-conflict
+
+  # Custom repository structure validation
+  - repo: local
+    hooks:
+      - id: validate-repo-structure
+        name: Validate Repository Structure
+        entry: node scripts/validate-structure.js
+        language: node
+        files: ''
+        always_run: true 
