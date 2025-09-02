@@ -3,7 +3,7 @@ title: "Amazon Bedrock"
 description: "Fully managed service that offers a choice of high-performing foundation models from leading AI companies through a single API"
 url: "https://aws.amazon.com/bedrock/"
 image: "/images/aws-logo.svg"
-type: "services-frameworks"
+type: "getting-started"
 date: "2024-01-15"
 skillLevel: "Intermediate"
 ---
