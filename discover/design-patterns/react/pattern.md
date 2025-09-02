@@ -1,16 +1,16 @@
 ---
 title: "ReAct: Reasoning and Acting"
-description: "ReAct is a prompt engineering pattern that synergizes reasoning and acting in language models by interleaving verbal reasoning traces with task-specific actions. The model generates both \"thoughts\" (internal reasoning) for planning, tracking progress, and handling exceptions, and \"actions\" for gathering information or interacting with environments. This creates a powerful feedback loop where reasoning guides what actions to take next, while observations from actions inform better reasoning. Unlike methods that perform only reasoning or only action generation, ReAct combines the strengths of both—enabling the model to induce plans, handle exceptions, and maintain working memory through reasoning while also interfacing with external knowledge and environments through actions."
+description: "ReAct interleaves reasoning ('thoughts') with actions (API calls, tool use) in a feedback loop. This dual approach outperforms pure reasoning/action methods by grounding decisions in real-world observations."
 type: "design-patterns"
 authors:
-  - name: "AWS"
-    url: "https://github.com/aws"
   - name: "aristsakpinis93"
     url: "https://github.com/aristsakpinis93"
 date: "2025-08-28"
 ---
 
 # ReAct: Reasoning and Acting
+
+ReAct is a prompt engineering pattern that synergizes reasoning and acting in language models by interleaving verbal reasoning traces with task-specific actions. The model generates both \"thoughts\" (internal reasoning) for planning, tracking progress, and handling exceptions, and \"actions\" for gathering information or interacting with environments. This creates a powerful feedback loop where reasoning guides what actions to take next, while observations from actions inform better reasoning. Unlike methods that perform only reasoning or only action generation, ReAct combines the strengths of both—enabling the model to induce plans, handle exceptions, and maintain working memory through reasoning while also interfacing with external knowledge and environments through actions.
 
 ![Pattern Architecture](./pattern.svg)
 
